@@ -23,7 +23,7 @@ var render = views('views', {
 });
 
 var getDemoDataFromApi = () => {
-  var url = 'http://localhost:6688/demo/data';
+  var url = 'http://api:6688/demo/data';
   return new Promise(function (resolve, reject) {
     request({url: url, json: true}, function (error, response, body) {
       if (error) return reject(error);
