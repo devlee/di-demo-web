@@ -7,7 +7,11 @@ RUN apt-get update; \
 
 RUN mkdir /home/git; \
     cd /home/git; \
-    sudo git clone https://github.com/devlee/di-demo-web.git -b master
+    git clone https://github.com/devlee/di-demo-web.git -b master; \
+    cd /home/git/di-demo-web; \
+    git checkout master; \
+    git pull; \
+    npm install;
 
 WORKDIR /home/git/di-demo-web
 
